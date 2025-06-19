@@ -26,7 +26,7 @@ resource "aws_subnet" "Subnet1" {
 resource "aws_subnet" "Subnet2" {
     vpc_id = aws_vpc.main.id
     cidr_block = "192.168.2.0/24"
-    availability_zone = "us-east-2b"
+    availability_zone = "us-east-1b"
 
     tags = {
         Name = "Subnet 2"
@@ -35,7 +35,7 @@ resource "aws_subnet" "Subnet2" {
 
 # Internet Gateway
 resource "aws_internet_gateway" "igw" {
-  vpc_id = aws_vpc.main.owner_id
+  vpc_id = aws_vpc.main.id
 
   tags = {
     Name = "main-vpc-igw"

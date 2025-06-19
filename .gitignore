@@ -1,0 +1,10 @@
+# Terraform
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+*.tfplan
+*.tfstate.*
+
+# Keep only these
+!.terraform.lock.hcl  # This is small and should be committed
